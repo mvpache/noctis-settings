@@ -1,7 +1,7 @@
 {
   "atomKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.fontFamily": "Inconsolata",
+  "editor.fontFamily": "Victor Mono Medium",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "explorer.confirmDelete": false,
@@ -768,8 +768,6 @@
             "keyword.other.base.cs",
             "variable.other.member.c",
             "support.type.core.rust",
-            "variable.other.object.property",
-            "variable.other.property",
             "source.r meta.function.r keyword.control.r",
             "comment.line.roxygen.r keyword",
             "comment.line.roxygen.r variable.parameter.r",
@@ -1019,7 +1017,14 @@
         },
         {
           "name": "JSON PROPERTIES",
-          "scope": ["source.json meta.structure.dictionary.json support.type.property-name.json"],
+          "scope": [
+            "source.json meta.structure.dictionary.json support.type.property-name.json",
+            "punctuation.support.type.property-name.end.json.comments",
+            "string.quoted.double.json.property-name",
+            "punctuation.support.type.property-name.begin.json.comments",
+            "punctuation.support.type.property-name.begin.json",
+            "punctuation.support.type.property-name.end.json"
+          ],
           "settings": {
             "foreground": "#C7444A"
           }
@@ -1037,10 +1042,43 @@
             "meta.structure.dictionary.json.comments",
             "meta.structure.dictionary.value.json.comments",
             "meta.structure.dictionary.json.comments",
-            "source.json.comments"
+            "source.json.comments",
+            "punctuation.definition.string.end.json.comments",
+            "string.quoted.double.json.comments",
+            "punctuation.definition.string.begin.json.comments",
+            "string.quoted.double.json",
+            "meta.structure.dictionary.value.json",
+            "meta.structure.dictionary.json",
+            "meta.structure.array.json",
+            "meta.structure.dictionary.value.json",
+            "meta.structure.dictionary.json",
+            "source.json",
+            "punctuation.definition.string.end.json",
+            "punctuation.definition.string.begin.json"
           ],
           "settings": {
             "foreground": "#9AA83A"
+          }
+        },
+        {
+          "name": "JS COMMENTS",
+          "scope": [
+            "source.js comment.block.js",
+            "source.ts comment.block.ts",
+            "comment.line.double-slash.js",
+            "comment.line.double-slash.ts",
+            "comment.block.documentation.ts",
+            "comment.block.documentation.js"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        },
+        {
+          "name": "CSS",
+          "scope": ["support.type.property-name.css", "meta.property-name.css", "meta.property-list.css", "source.css"],
+          "settings": {
+            "foreground": "#e2e1e1"
           }
         }
       ]
